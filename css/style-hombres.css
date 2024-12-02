@@ -1,0 +1,279 @@
+body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-color: rgb(17, 17, 17);
+    font-family: 'Josefin Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+    margin: 1rem 0 0 0 ;
+}
+
+.divisor-chick {
+    display: flex;
+    border-top: 0.3125rem solid #DAD3BE;
+    /* 5px */
+    border-bottom: 0.3125rem solid #DAD3BE;
+    margin: rem 1rem 0 8rem 0;
+}
+
+.divisor-chick div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 6.25rem;
+    /* 100px */
+    background-color: #DAD3BE;
+    margin: 1.25rem 0 1.25rem 0;
+    /* 20px */
+    padding: 0.625rem 0 0.625rem 0;
+    /* 10px */
+    font-size: 1.875rem;
+    /* 30px */
+}
+
+.Color {
+    display: inline-block;
+    /* Para alinearlo con el texto */
+    width: 16px;
+    /* Ancho del cuadrado */
+    height: 16px;
+    /* Alto del cuadrado */
+    border: .5px solid #ffffff;
+    /* Borde del cuadrado */
+    background-color: red;
+    /* Fondo vacío */
+    vertical-align: middle;
+    /* Alineación con el texto */
+    margin-left: 5px;
+    /* Espaciado desde el texto */
+}
+
+
+/* Clases de las portadas */
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 5rem;
+    margin: 3rem 0rem 10rem 0rem;
+    height: 100vh;
+    /* 50% de la altura de la ventana */
+    color: rgb(209, 209, 209);
+    max-height: 90dvh;
+}
+
+.portada-texto {
+    gap: 1rem 0;
+    color: white;
+    justify-self: end;
+    max-width: 70%;
+    align-self: end;
+}
+
+.portada-texto-titulo {
+    max-width: 100%;
+    text-transform: uppercase;
+    font-size: 2rem;
+    padding: 0 0 0 0;
+    margin: 0 0 0 0;
+    align-self: flex-end;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.portada-texto-titulo:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);
+    /* Hace que las letras crezcan ligeramente */
+}
+
+.portada-texto-descripcion {
+    border-top: .2rem solid white;
+    text-align: justify;
+    line-height: 1.5;
+    padding: 0 0 0 0rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.portada-texto-descripcion ul>li {
+    line-height: 2.5;
+}
+
+
+.portada-texto-descripcion:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);
+    /* Hace que las letras crezcan ligeramente */
+}
+
+.portada-foto {
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+}
+
+.portada-foto img:hover {
+    border: 2px solid #fff;
+    transform: scale(.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portada-foto img {
+    max-width: 100%;
+    transition: transform 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+}
+
+/* Vestido Rubí */
+.izquierda {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 5rem;
+    margin: 6rem 0rem 6rem 0rem;
+    height: 100vh;
+    /* 50% de la altura de la ventana */
+    color: rgb(209, 209, 209);
+    max-height: 100dvh;
+}
+
+.izquierda-titulo {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    justify-self: center;
+    align-self: center;
+    padding: 0 0 0 0;
+}
+
+.izquierda-linea {
+    display: flex;
+}
+
+.izquierda-linea hr {
+    flex: 1;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-width: .2rem;
+    border-style: solid;
+    align-self: center;
+}
+
+.izquierda-img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.izquierda-img img {
+    max-width: 85%;
+    transition: transform 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+}
+
+.izquierda-img img:hover {
+    border: 2px solid #fff;
+    transform: scale(.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.izquierda-texto {
+    align-self: center;
+    color: white;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 70%;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.izquierda-texto ul>li {
+    line-height: 2.5;
+}
+
+.izquierda-texto:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.2);
+    /* Hace que las letras crezcan ligeramente */
+}
+
+
+
+/* Vestido Derecha */
+.derecha {
+    color: rgb(209, 209, 209);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 20% 1fr;
+    grid-auto-columns: 1fr;
+    gap: 10px 5rem;
+    margin: 6rem 0rem 6rem 0rem;
+    height: 100vh;
+    /* 50% de la altura de la ventana */
+    max-height: 100dvh;
+}
+
+.derecha-titulo {
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    justify-self: center;
+    align-self: center;
+    padding: 0 0 0 0;
+}
+
+.derecha-linea {
+    display: flex;
+}
+
+.derecha-linea hr {
+    flex: 1;
+    background-color: #ffffff;
+    border-color: #ffffff;
+    border-width: .2rem;
+    border-style: solid;
+    align-self: center;
+}
+
+.derecha-texto {
+    align-self: center;
+    justify-self: end;
+    color: white;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 70%;
+    transition: color 0.3s ease, transform 0.3s ease;
+    /* Transiciones suaves */
+}
+
+.derecha-texto ul>li {
+    line-height: 2.5;
+}
+
+.derecha-texto:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.2);
+    /* Hace que las letras crezcan ligeramente */
+}
+
+
+.derecha-img {
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.derecha-img img {
+    max-width: 85%;
+    transition: transform 0.5s ease, border 0.5s ease;
+    cursor: pointer;
+}
+
+.derecha-img img:hover {
+    border: 2px solid #fff;
+    transform: scale(.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

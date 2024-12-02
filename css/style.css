@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Josefin Sans" sans-serif;
 }
 
 /* Estilos principales de la navbar */
@@ -16,7 +16,10 @@ body {
     transition: all 0.3s ease;
 }
 
+<<<<<<< HEAD
 /* Estilos marca */
+=======
+>>>>>>> cdc6b6d64b44ca1b6733afa580230aecc2448440
 .navbar-brand {
     font-weight: bold;
     color: #fff !important;
@@ -24,6 +27,32 @@ body {
     letter-spacing: 1px;
     line-height: 1;
     padding: 0;
+<<<<<<< HEAD
+=======
+}
+
+.brand-subtitle {
+    font-size: 13px;
+    /* Tamaño más pequeño para el subtítulo */
+    text-transform: none;
+    /* Mantiene el formato original del texto */
+    letter-spacing: normal;
+    /* Espaciado normal entre letras */
+    font-weight: normal;
+    /* Peso de fuente normal (no negrita) */
+    opacity: 0.8;
+    margin-bottom: 6px;
+}
+
+.nav-link {
+    color: #ecf0f1 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 10px 20px !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+>>>>>>> cdc6b6d64b44ca1b6733afa580230aecc2448440
     display: flex;
     align-items: center;
 }
@@ -60,7 +89,10 @@ body {
 }
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> cdc6b6d64b44ca1b6733afa580230aecc2448440
 .nav-link::after {
     content: '';
     position: absolute;
@@ -568,6 +600,40 @@ body {
     background-color: #111010;
     padding: 15px 0;
     margin-top: 30px;
+}
+
+.seleccion {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+    max-height: 90dvh;
+    color: #fff;
+}
+
+.hombres {
+    font-family: "Josefins Sans" sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #a6a280;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.mujeres {
+    font-family: "Josefins Sans" sans-serif;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    background-color: #a6a280;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.mujeres img{
+    width: 100%;
+    height: auto;
 }
 
 @media(max-width: 768px) {
