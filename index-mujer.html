@@ -5,12 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style-damas.css">
-    <base href="img/">
+    <link rel="stylesheet" href="css/style.css">
     <title>Catalogo</title>
 </head>
 
 <body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <!-- Logo y marca -->
+            <a class="navbar-brand" href="#">
+                <img href="index.html" src="img/LogoEditado - Copy.png" alt="Logo" class="navbar-logo">
+            </a>
+            <!-- Botón -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Nosotros</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-mujer.html">Mujer</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="index-hombre.html">Hombre</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">¡Contáctanos!</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <!--Titulo del catalogo -->
     <div class="title-main">
         <hr>
@@ -509,7 +549,66 @@
         </div>
     </div>
 
-
+     <!-- footer -->
+     <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3 mb-3 mb-md-0">
+                    <h5>Quick links</h5>
+                    <ul class="list-unstyled footer-links">
+                        <div class="social-i">
+                            <a href="#" class="social-i"><i class="fa-solid fa-location-dot"></i></i></a> Playa del
+                            Carmen, Q.R., México</p>
+                            <p><a href="#" class="social-i"><i class="fa-solid fa-phone"></i></a> + 52 (984) 127 9117
+                            </p>
+                            <p> <a href="#" class="social-i"><i class="fa-solid fa-envelope"></i></a>
+                                sustenstyle.fg@gmail.com</p>
+                            <p><a href="#" class="social-i"><i class="fa-solid fa-clock"></i></a> Monday to Friday: 8:00
+                                AM - 5:00 PM</p>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Categorías</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Curvy</a></li>
+                        <li><a href="#">Chick & Glam</a></li>
+                        <li><a href="#">Para ellos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Enlaces</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="#">Página de inicio</a></li>
+                        <li><a href="#">Acerca de nosotros</a></li>
+                        <li><a href="#">Ayuda</a></li>
+                        <li><a href="#">Contactanos</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3" class="redes-sociales">
+                    <h5>Redes Sociales</h5>
+                    <ul class="list-unstyled footer-links">
+                        <li><a href="https://www.instagram.com/susten.style/" class="social-icons"><i
+                                    class="fab fa-instagram"></i> @susten.style</a></li>
+                        <li><a href="https://www.facebook.com/Sustenstyle" class="social-icons"><i
+                                    class="fab fa-facebook-f"></i> SustenStyle</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <p>&copy; <span id="year"></span> All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
