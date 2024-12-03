@@ -278,7 +278,7 @@ body {
     display: grid;
     /* Activa el diseño en cuadrícula */
     /* Crea columnas automáticas con un mínimo de 250px y que se ajusten al espacio */
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 90px;
     /* Espacio entre los elementos de la cuadrícula */
     padding: 0;
@@ -303,7 +303,7 @@ body {
 }
 
 .product-card-dest:hover {
-    transform: translateY(-2px);
+    transform: translateY(-10px);
     /* Mueve la tarjeta 5px hacia arriba al pasar el mouse */
 }
 
@@ -410,6 +410,7 @@ body {
     }
 }
 
+
 @media (max-width: 480px) {
     .banner-img {
         height: 150px;  /* Ajusta la altura aún más en dispositivos muy pequeños */
@@ -434,6 +435,7 @@ body {
 
 .product-container {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 100px;
     margin-top: 20px;
@@ -457,6 +459,7 @@ body {
     object-fit: contain; /* Mantiene la relación de aspecto de la imagen */
     border-radius: 8px;
     margin-bottom: 25px;
+    
 }
 
 /* Botones de productos */
@@ -532,6 +535,11 @@ body {
         width: 100%;
     }
 
+    .product-image-dest {
+        width: 100%;
+        height: fit-content;
+    }
+
     .marco-btn {
         padding: 8px 16px;
         font-size: 14px;
@@ -543,19 +551,29 @@ body {
     .product-container {
         flex-direction: column;
         gap: 30px;
+        align-items: center;
     }
 
     .product-card {
-        max-width: 100%;
-        padding: 0 10px;
+        align-items: center;
+        padding: 0 0px;
     }
 
     .product-image {
-        max-height: 350px; /* Ajusta la altura de las imágenes en pantallas pequeñas */
+        max-height: 500px; /* Ajusta la altura de las imágenes en pantallas pequeñas */
+        border-radius: 8px;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .product-image-dest {
+        width: 100%;
+        height: fit-content;
     }
 
     .product-btn {
-        width: 100%;
+        width: 50%;
         padding: 12px;
         font-size: 14px;
     }
@@ -590,11 +608,19 @@ body {
     }
 
     .product-image {
-        max-height: 250px;
+        width: 100%;
+        max-height: 500px;
+        border-radius: 8px;
+        height: auto;
+    }
+
+    .product-image-dest {
+        width: 100%;
+        height: fit-content;
     }
 
     .product-btn {
-        width: 100%;
+        width: 50%;
         padding: 10px 0;
     }
 
@@ -662,6 +688,7 @@ body {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .footer-links li {
@@ -670,8 +697,10 @@ body {
 }
 
 .footer-links li:hover {
+    color: #a6a280;
     transform: translateX(5px);
 }
+
 
 .social-icons {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -694,7 +723,7 @@ body {
 }
 
 .copyright {
-    background-color: #111010;
+    background-color: #1E1E1E;
     padding: 15px 0;
     margin-top: 30px;
 }

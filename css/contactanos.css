@@ -1,8 +1,10 @@
 body {
-    margin: 0;
     font-family: Arial, Helvetica, sans-serif;
     color: #000;
     background-color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
 }
 
 
@@ -125,19 +127,20 @@ body {
 
 /* Head */
 
-.head {
+.head-text {
     padding: 20px;
     text-align: center;
     margin-top: 70px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1 {
-    font-size: 18px;
+    font-size: 22px;
     text-align: center;
     color: #1e1e1e;
     margin: 0;
     font-weight: bold;
-    font-family: Montserrat;
+    
 }
 
 h2 {
@@ -145,7 +148,6 @@ h2 {
     text-align: center;
     color: #1e1e1e;
     margin: 5px;
-    font-family: Montserrat;
     font-weight: bolder;
 }
 
@@ -257,25 +259,26 @@ h2 {
 .address-street,
 .address-title-text,
 .email-address {
-    font-family: Montserrat;
-    font-weight: bolder;
+    font-weight: bold;
     font-size: 14px;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 
 .address-text {
     margin-top: 5px;
     text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .contact-message,
 .email-message {
-    font-family: Montserrat;
     font-weight: bolder;
     font-size: 18px;
     text-align: center;
     margin-top: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .btn-dir {
@@ -286,7 +289,6 @@ h2 {
     border-radius: 20px;
     margin-top: 70px;
     cursor: pointer;
-    font-family: Montserrat;
     font-size: bold;
     text-align: center;
 }
@@ -296,16 +298,61 @@ h2 {
 h4 {
     font-size: 30px;
     text-align: center;
-    color: #09320f;
-    margin-top: 100px;
+    color: #09320F;
+    margin-top: 40px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 20px;
     margin-bottom: 50px;
+    margin: auto;
+}
+
+.form-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    margin: auto;
+}
+
+.form-input input {
+    width: 100%   ;
+    padding: 10px;
+    margin: 3px 0;
+    border: 1.6px solid #26560d;
+    box-sizing: border-box;
+}
+
+.form-input textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1.6px solid #1D390E;
+    box-sizing: border-box;
+    min-height: 140px;
+}
+
+.form-input-button button {
+    background-color: #09320F;
+    color: #fff;
+    padding: 8px 25px;
+    border-radius: 10px;
+    border: 2px solid;
+    cursor: pointer;
+    box-sizing: content-box;
+
+}
+
+.form-input-button button:hover {
+    background-color: #14601f; /* Mantiene el mismo color de fondo */
+    color: #fff; /* Mantiene el mismo color de texto */
+    
 }
 
 .form-input {
@@ -316,48 +363,38 @@ form {
 .form-input-button {
     display: flex;
     justify-content: flex-start;
-    
+    margin-bottom: 30px;
 }
 
-input {
+.form-input-button.align-left {
+    align-self: flex-start; /* Alinea el contenedor del botón a la izquierda */
+}
+
+
+/* .form-input input {
     width: 600px;
-    box-sizing: border-box;
     padding: 15px 8px;
     border: 1.5px solid #1D390E;
     min-height: 60px;
-}
+    box-sizing: border-box;
+    font-family: "Montserrat";
+} */
 
 input::placeholder {
-    font-family: Montserrat;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-textarea {
+/* textarea {
     width: 600px;
     box-sizing: border-box;
     padding: 15px 8px;
     border: 1.5px solid #1D390E;
-    min-height: 170px;
-}
+} */
 
 textarea::placeholder {
-    font-family: Montserrat;
-}
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+} 
 
-.btn {
-    background-color: #09320f;
-    color: #fff;
-    padding: 8px 25px;
-    
-    border-radius: 10px;
-    border: 2px solid;
-    cursor: pointer;
-    box-sizing: content-box;
-    margin-left: 20px;
-}
-
-.btn:hover {
-    background-color: #1D390E;
-}
 
 /* Responsividad para el head */
 @media (max-width: 768px) {
@@ -384,7 +421,7 @@ textarea::placeholder {
     }
 
     .box-tel, .box-ubi, .box-mail {
-        width: 90%;
+        width: 100%;
         margin-bottom: 20px;
     }
 }
@@ -392,14 +429,19 @@ textarea::placeholder {
 /* Responsividad para el formulario */
 @media (max-width: 768px) {
     form {
-        width: 90%;
-        margin: 20px auto;
+        width: 100%;
     }
 
-    .form-input, .form-input-button {
+    .form-input {
         width: 100%;
         padding: 0;
         margin: 10px 0;
+    }
+
+    .form-input-button {
+        width: 100%;
+        padding: 0;
+        margin: 20px 0;
     }
 
     input, textarea {
@@ -407,12 +449,31 @@ textarea::placeholder {
     }
 
     .btn {
-        width: 100%;
         margin-left: 0;
     }
 }
 
+@media (min-width: 768px) {
+    .form-content {
+        width: 600px;
+    }
 
+    .form-input input {
+        width: 600px;
+    }
+
+    .form-input textarea {
+        width: 600px;
+    }
+
+    .btn {
+        margin-left: 0
+    }
+
+    .form-input-button {
+        align-items: flex-start;
+    }
+}
 
 
 
@@ -467,6 +528,7 @@ textarea::placeholder {
     color: #fff;
     text-decoration: none;
     transition: color 0.3s ease;
+    cursor: pointer;
 }
 
 .footer-links li {
@@ -475,8 +537,10 @@ textarea::placeholder {
 }
 
 .footer-links li:hover {
+    color: #a6a280;
     transform: translateX(5px);
 }
+
 
 .social-icons {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
@@ -499,7 +563,7 @@ textarea::placeholder {
 }
 
 .copyright {
-    background-color: #111010;
+    background-color: #1E1E1E;
     padding: 15px 0;
     margin-top: 30px;
 }
