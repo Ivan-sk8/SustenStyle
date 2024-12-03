@@ -1,0 +1,480 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000;
+    background-color: #fff;
+}
+
+
+:root {
+    --primary-color: #111010;
+    --secondary-color: #111010;
+    --hover-color: #FFFFFF;
+}
+
+/* Estilos principales de la navbar */
+.navbar {
+    background-color: #1e1e1e;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+/* Estilos marca */
+.navbar-brand {
+    font-weight: bold;
+    color: #fff !important;
+    font-size: 24px;
+    letter-spacing: 1px;
+    line-height: 1;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar-nav {
+    margin: 0 auto;
+    /* Centrar horizontalmente */
+    display: flex;
+    justify-content: center;
+    /* Distribuir elementos centrados */
+    gap: 20px;
+    /* Espaciado entre los enlaces */
+}
+
+/* Estilo para el logo */
+.navbar-logo {
+    height: 70px;
+    /* Altura fija para el logo */
+    width: auto;
+    /* Ancho automático para mantener proporción */
+}
+
+/* Estilos de los enlaces */
+
+.nav-link {
+    color: #ecf0f1 !important;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding: 8px 16px !important;
+    margin: 0 5px;
+    transition: all 0.3s ease;
+    position: relative;
+    font-size: 14px;
+}
+
+
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 59%;
+    width: 0;
+    height: 2px;
+    background-color: var(--hover-color);
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--hover-color) !important;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+.navbar-toggler {
+    border-color: #fff;
+}
+
+
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: var(--secondary-color);
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+        border: 1px solid #fffa;
+    }
+
+    .nav-link {
+        text-align: center;
+        justify-content: center;
+        margin: 5px 0;
+        padding: 10px !important;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}
+
+.nav-item {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.5s ease;
+}
+
+.nav-item.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+.head {
+    padding: 20px;
+    text-align: center;
+    margin-top: 70px;
+}
+
+h1 {
+    font-size: 18px;
+    text-align: center;
+    color: #1e1e1e;
+    margin: 0;
+    font-weight: bold;
+    font-family: Montserrat;
+}
+
+h2 {
+    font-size: 32px;
+    text-align: center;
+    color: #1e1e1e;
+    margin: 5px;
+    font-family: Montserrat;
+    font-weight: bolder;
+}
+
+.box-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0px;
+
+}
+
+.box-tel {
+    box-sizing: border-box;
+    width: 328px;
+    height: 274px;
+    background-color: #acb4a4;
+    padding: 30px 40px;
+    padding-top: 38px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-ubi {
+    box-sizing: border-box;
+    width: 327px;
+    height: 427px;
+    background-color: #425833;
+    padding: 80px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.box-mail {
+    box-sizing: border-box;
+    width: 328px;
+    height: 274px;
+    background-color: #acb4a4;
+    padding: 50px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.phone-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.address-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.email-icon-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.phone-icon {
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.address-icon {
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.email-icon {
+    width: 72px;
+    height: 72px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-number {
+    margin-top: 20px;
+}
+
+.email-text {
+    margin-top: 20px;
+}
+
+.phone-text,
+.address-location,
+.address-street,
+.address-title-text,
+.email-address {
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 14px;
+    text-align: center;
+}
+
+
+.address-text {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.contact-message,
+.email-message {
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.btn-dir {
+    background-color: transparent;
+    color: #000;
+    padding: 15px 20px;
+    border: 2px solid #000;
+    border-radius: 20px;
+    margin-top: 70px;
+    cursor: pointer;
+    font-family: Montserrat;
+    font-size: bold;
+    text-align: center;
+}
+
+/* Form */
+
+h4 {
+    font-size: 30px;
+    text-align: center;
+    color: #09320f;
+    margin-top: 100px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.form-input {
+    padding: 6px 20px;
+    margin: 15px 0;
+}
+
+.form-input-button {
+    display: flex;
+    justify-content: flex-start;
+    
+}
+
+input {
+    width: 600px;
+    box-sizing: border-box;
+    padding: 15px 8px;
+    border: 1.5px solid #1D390E;
+    min-height: 60px;
+}
+
+input::placeholder {
+    font-family: Montserrat;
+}
+
+textarea {
+    width: 600px;
+    box-sizing: border-box;
+    padding: 15px 8px;
+    border: 1.5px solid #1D390E;
+    min-height: 170px;
+}
+
+textarea::placeholder {
+    font-family: Montserrat;
+}
+
+.btn {
+    background-color: #09320f;
+    color: #fff;
+    padding: 8px 25px;
+    
+    border-radius: 10px;
+    border: 2px solid;
+    cursor: pointer;
+    box-sizing: content-box;
+    margin-left: 20px;
+}
+
+.btn:hover {
+    background-color: #1D390E;
+}
+
+
+
+
+
+
+
+
+
+/* footer */
+.footer {
+    background: #1E1E1E;
+    color: white;
+    padding: 50px 0 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer h5 {
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.footer h5::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 50px;
+    height: 2px;
+    background-color: #ecf0f1;
+    transition: width 0.3s ease;
+}
+
+.imagen {
+    width: 100%;
+    object-fit: cover;
+}
+
+.footer h5:hover::after {
+    width: 100%;
+
+}
+
+.footer p,
+.footer ul {
+    font-weight: 300;
+
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-links li {
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.footer-links li:hover {
+    transform: translateX(5px);
+}
+
+.social-icons {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1.2rem;
+    margin-right: 20px;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.social-icons:hover {
+    color: #a6a280;
+    transform: translateY(-5px);
+}
+
+
+
+#year {
+    font-weight: bold;
+    color: #fff;
+}
+
+.copyright {
+    background-color: #111010;
+    padding: 15px 0;
+    margin-top: 30px;
+}
+
+@media(max-width: 768px) {
+    .footer {
+        text-align: center;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        background-color: #111010;
+        padding: 20px;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        text-align: center;
+        justify-content: center;
+        margin: 5px 0;
+    }
+
+    .nav-link::after {
+        display: none;
+    }
+}

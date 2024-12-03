@@ -1,24 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/aboutus.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
         integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Inicio</title>
+        <link rel="stylesheet" href="css/contactanos.css" />
+    <title>Contáctanos</title>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container">
             <!-- Logo y marca -->
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="#">
                 <img src="img/LogoEditado.png" alt="Logo" class="navbar-logo">
             </a>
             <!-- Botón -->
@@ -31,7 +30,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
+                        <a class="nav-link" href="#">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="aboutus.html">Nosotros</a>
@@ -49,24 +48,69 @@
             </div>
         </div>
     </nav>
-    <main>
-        <header class="title-main">
-            <hr>
-            <h1>Sobre Nosotros</h1>
-            <hr>
-        </header>
-        <div class="us">
-            <div class="us-texto">
-                <p>En SustenStyle buscamos transformar la moda, ofreciendo una opción sostenible que promueva la economía circular, brindando a las personas la oportunidad de lucir increíbles sin comprometer el futuro del planeta.
-                </p>
+    <div>
+        <div class="head">
+            <h1>Contáctanos</h1>
+            <h2>¡Nosotros te ayudamos <br>con tu traje ideal!</h2>
+        </div>
+
+        <div class="box-main">
+            <div class="box-tel">
+                <div class="phone-icon-container">
+                    <img src="img/cel.png" alt="Icono">
+                </div>
+                <div class="phone-number">
+                    <span class="phone-text">(+52) 984 127 9117</span>
+                </div>
+                <span class="contact-message">Envíanos mensaje</span>
             </div>
-            <div class="us-imagen">
-                <img src="img/CUARZO.webp">
+            <div class="box-ubi">
+                <div class="address-icon-container">
+                    <img src="img/Vector.png" alt="Icono">
+                </div>
+                <div class="address-text">
+                    <span class="address-location">Playa del Carmen,</span> <br>
+                    <span class="address-location">Quintana Roo.</span>
+                </div>
+                <div class="address-title">
+                    <button class="btn-dir">Dirección</button>
+                </div>
+            </div>
+            <div class="box-mail">
+                <div class="email-icon-container">
+                    <img src="img/Mail.png" alt="Icono">
+                </div>
+                <div class="email-text">
+                    <span class="email-address">sustenstyle.fg@gmail.com</span>
+                </div>
+                <span class="email-message">Contáctanos</span>
             </div>
         </div>
-    </main>
-       <!-- footer -->
-       <footer class="footer mt-auto">
+
+        <form>
+            <div>
+                <h4>¡Envíanos un mensaje!</h4>
+                <div class="form-input">
+                    <input type="text" placeholder="Nombre completo">
+                </div>
+                <div class="form-input">
+                    <input type="email" placeholder="Correo electrónico">
+                </div>
+                <div class="form-input">
+                    <input type="tel" placeholder="Número de teléfono" pattern="[0-9]{9}">
+                </div>
+                <div class="form-input">
+                    <textarea placeholder="Mensaje"></textarea>
+                </div>
+                <div class="form-input-button">
+                    <button type="submit" class="btn">Enviar mensaje</button>
+                </div>
+            </div>
+    </div>
+
+
+    <!-- footer -->
+    <footer class="footer mt-auto">
         <div class="container">
             <div class="row">
                 <div class="col-md-3 mb-3 mb-md-0">
@@ -86,9 +130,9 @@
                 <div class="col-md-3">
                     <h5>Categorías</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="#">Curvy</a></li>
-                        <li><a href="#">Chick & Glam</a></li>
-                        <li><a href="index-hombre.html">Para ellos</a></li>
+                        <li><a onclick="location.href='index-mujer.html#curvy'">Curvy</a></li>
+                        <li><a onclick="location.href='index-mujer.html#chick'">Chick & Glam</a></li>
+                        <li><a onclick="location.href='index-hombre.html#ellos'">Para ellos</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
@@ -102,9 +146,9 @@
                 <div class="col-md-3" class="redes-sociales">
                     <h5>Redes Sociales</h5>
                     <ul class="list-unstyled footer-links">
-                        <li><a href="https://www.instagram.com/susten.style/" class="social-icons"><i
+                        <li><a href="https://www.instagram.com/susten.style/" class="social-icons" target="_blank"><i
                                     class="fab fa-instagram"></i> @susten.style</a></li>
-                        <li><a href="https://www.facebook.com/Sustenstyle" class="social-icons"><i
+                        <li><a href="https://www.facebook.com/Sustenstyle" class="social-icons" target="_blank"><i
                                     class="fab fa-facebook-f"></i> SustenStyle</a></li>
                     </ul>
                 </div>
@@ -120,10 +164,10 @@
             </div>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
         crossorigin="anonymous"></script>
     <script src="js/script.js"></script>
 </body>
-
 </html>
