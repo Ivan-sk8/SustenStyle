@@ -1,7 +1,7 @@
 body {
     max-width: 100%;
     overflow-x: hidden;
-    background-color: rgb(17, 17, 17);
+    background-color: rgb(13, 13, 13);
     font-family: 'Josefin Sans', sans-serif;
     margin: 0;
     padding: 0;
@@ -110,9 +110,17 @@ body {
 .portada-texto-titulo {
     max-width: 100%;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: 1.8rem;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.portada-texto-titulo:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);
+    /* Hace que las letras crezcan ligeramente */
 }
 
 .portada-texto-descripcion {
@@ -169,7 +177,7 @@ body {
 
 .izquierda-titulo {
     text-transform: uppercase;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     justify-self: center;
     align-self: center;
     padding: 0 0 0 0;
@@ -302,4 +310,409 @@ body {
     border: 2px solid #fff;
     transform: scale(.9);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estilos para móviles */
+@media (max-width: 480px) {
+    /* General Reset */
+
+    .portada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .portada-texto-titulo h1 {
+        justify-self: center;
+        font-size: 3rem;
+    }
+
+    .portada-texto-descripcion P {
+        padding: 1rem 0 0rem 0;
+        margin: 0 0 3rem 0;
+        font-size: 1rem;
+    }
+
+    .portada-foto {
+        justify-content: center;
+        width: 100%;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 10px;
+    }
+
+    .divisor-chick {
+        display: flex;
+        border-top: 3px solid #DAD3BE;
+        /* 5px */
+        border-bottom: 3px solid #DAD3BE;
+        margin: 2rem 0 1rem 0;
+        color: black;
+    }
+
+    .divisor-chick div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        /* 100px */
+        background-color: #DAD3BE;
+        margin: 1rem 0 1rem 0;
+        /* 20px */
+        padding: .5rem 0 0.5rem 0;
+        /* 10px */
+        font-size: 3rem;
+        /* 30px */
+    }
+
+    .divisor-chick div>h1 {
+        font-size: 2.5rem;
+        /* 30px */
+    }
+
+    /* Estructura general */
+    .izquierda,
+    .derecha {
+        display: flex;
+        flex-direction: column;
+        /* Orden en columna */
+        align-items: center;
+        /* Centra horizontalmente los elementos */
+        max-height: 100dvh;
+    }
+
+    .izquierda-linea,
+    .derecha-linea,
+    .izquierda-titulo,
+    .derecha-titulo,
+    .izquierda-img,
+    .derecha-img,
+    .izquierda-texto,
+    .derecha-texto {
+        width: 100%;
+        /* Ocupa toda la línea */
+        text-align: center;
+        /* Centra el contenido textual */
+    }
+
+    /* Asegura el orden correcto */
+    .izquierda-linea,
+    .derecha-linea {
+        order: 0;
+        /* Primero la línea */
+    }
+
+    .izquierda-titulo,
+    .derecha-titulo {
+        order: 1;
+        /* Después el título */
+    }
+
+    .izquierda-img,
+    .derecha-img {
+        order: 2;
+        /* Luego la imagen */
+    }
+
+    .izquierda-texto,
+    .derecha-texto {
+        order: 3;
+        /* Finalmente el texto */
+    }
+
+    /* Imágenes responsivas */
+    .izquierda-img img,
+    .derecha-img img {
+        width: 45%;
+        /* Imágenes ocupan todo el ancho */
+        height: auto;
+        /* Mantiene proporciones */
+    }
+
+    /* Líneas horizontales centradas */
+    .izquierda-linea hr,
+    .derecha-linea hr {
+        margin: 10px auto;
+        width: 90%;
+        height: 0.2rem;
+        background-color: #fff;
+        border: none;
+        /* Elimina bordes adicionales */
+    }
+
+    /* Títulos */
+    .izquierda-titulo h1,
+    .derecha-titulo h1 {
+        font-size: 2.5rem;
+        /* Ajusta tamaño del texto */
+        margin: 10px 0;
+        text-transform: uppercase;
+    }
+
+    .izquierda-texto p,
+    .derecha-texto p {
+        font-size: 1rem;
+        text-align: justify;
+        /* Para mejor legibilidad */
+        line-height: 1.5;
+    }
+
+    .izquierda-texto ul,
+    .derecha-texto ul {
+        font-size: .6rem;
+        text-align: justify;
+        /* Para mejor legibilidad */
+        line-height: 1.2;
+    }
+
+    .izquierda-texto,
+    .derecha-texto {
+        margin: 2rem 0 0 0;
+        display: grid;
+        /* Eliminamos el valor incorrecto */
+        grid-template-columns: 50% 40%;
+        grid-template-rows: 1fr;
+        gap: 2rem 3rem;
+        justify-self: start;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12px;
+    }
+
+    .divisor-chick {
+        display: flex;
+        border-top: 3px solid #DAD3BE;
+        /* 5px */
+        border-bottom: 3px solid #DAD3BE;
+        margin: 2rem 0 1rem 0;
+        color: black;
+    }
+
+    .portada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .portada-texto-titulo h1 {
+        justify-self: center;
+        font-size: 4rem;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .portada-texto-descripcion P {
+        padding: 2rem 0 0rem 0;
+        margin: 0 0 3rem 0;
+        font-size: 1rem;
+    }
+
+    .portada-foto {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .divisor-chick div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        /* 100px */
+        background-color: #DAD3BE;
+        margin: 1rem 0 1rem 0;
+        /* 20px */
+        padding: .5rem 0 0.5rem 0;
+        /* 10px */
+        font-size: 3rem;
+        /* 30px */
+    }
+
+    .divisor-chick div>h1 {
+        font-size: 2.5rem;
+        /* 30px */
+    }
+
+    .izquierda {
+        display: grid;
+        grid-template-columns: 60% 1fr;
+        grid-template-rows: 25% 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 5rem;
+        margin: 6rem 0rem 6rem 0rem;
+        height: 100vh;
+        /* 50% de la altura de la ventana */
+        color: rgb(209, 209, 209);
+        max-height: 100vh;
+    }
+
+    .derecha {
+        color: rgb(209, 209, 209);
+        display: grid;
+        grid-template-columns: 1fr 60%;
+        grid-template-rows: 25% 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 5rem;
+        margin: 6rem 0rem 6rem 0rem;
+        height: 100vh;
+        /* 50% de la altura de la ventana */
+        max-height: 100vh;
+    }
+
+    .izquierda-titulo h1,
+    .derecha-titulo h1 {
+        justify-self: center;
+        font-size: 3rem;
+    }
+
+    .izquierda-img img,
+    .derecha-img img {
+        order: 0;
+        /* Primero la línea */
+        width: 80%;
+        /* Ocupa toda la línea */
+        height: auto;
+        /* Mantiene proporciones */
+    }
+
+    .izquierda-texto p,
+    .derecha-texto p {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1000px) {
+
+    /* General Reset */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        color: #fff;
+        font-family: "Josefin Sans", sans-serif;
+        font-size: 12px;
+    }
+
+    .divisor-chick {
+        display: flex;
+        border-top: 3px solid #DAD3BE;
+        /* 5px */
+        border-bottom: 3px solid #DAD3BE;
+        margin: 2rem 0 1rem 0;
+        color: black;
+    }
+
+    .portada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+    }
+
+    .portada-texto-titulo h1 {
+        justify-self: center;
+        font-size: 4rem;
+        margin: 2rem 0 2rem 0;
+    }
+
+    .portada-texto-descripcion P {
+        padding: 2rem 0 0rem 0;
+        margin: 0 0 3rem 0;
+        font-size: 1rem;
+    }
+
+    .portada-foto {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .divisor-chick div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 3rem;
+        /* 100px */
+        background-color: #DAD3BE;
+        margin: 1rem 0 1rem 0;
+        /* 20px */
+        padding: .5rem 0 0.5rem 0;
+        /* 10px */
+        font-size: 3rem;
+        /* 30px */
+    }
+
+    .divisor-chick div>h1 {
+        font-size: 2.5rem;
+        /* 30px */
+    }
+
+    .izquierda {
+        display: grid;
+        grid-template-columns: 50% 1fr;
+        grid-template-rows: 25% 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 5rem;
+        margin: 6rem 0rem 6rem 0rem;
+        height: 100vh;
+        /* 50% de la altura de la ventana */
+        color: rgb(209, 209, 209);
+        max-height: 100vh;
+    }
+
+    .derecha {
+        color: rgb(209, 209, 209);
+        display: grid;
+        grid-template-columns: 1fr 50%;
+        grid-template-rows: 25% 1fr;
+        grid-auto-columns: 1fr;
+        gap: 10px 5rem;
+        margin: 6rem 0rem 6rem 0rem;
+        height: 100vh;
+        /* 50% de la altura de la ventana */
+        max-height: 100vh;
+    }
+
+    .izquierda-titulo h1,
+    .derecha-titulo h1 {
+        justify-self: center;
+        font-size: 3rem;
+    }
+
+    .izquierda-img img,
+    .derecha-img img {
+        order: 0;
+        /* Primero la línea */
+        width: 80%;
+        /* Ocupa toda la línea */
+        height: auto;
+        /* Mantiene proporciones */
+    }
+
+    .izquierda-texto p,
+    .derecha-texto p {
+        margin-bottom: 1rem;
+    }
 }
