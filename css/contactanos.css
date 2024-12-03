@@ -290,79 +290,58 @@ h2 {
 }
 
 /* Form */
+/* Responsividad para el head */
+@media (max-width: 768px) {
+    .head {
+        padding: 10px;
+        margin-top: 50px;
+    }
 
-h4 {
-    font-size: 30px;
-    text-align: center;
-    color: #09320f;
-    margin-top: 100px;
+    h1 {
+        font-size: 16px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
+/* Responsividad para box-main */
+@media (max-width: 768px) {
+    .box-main {
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0;
+    }
+
+    .box-tel, .box-ubi, .box-mail {
+        width: 90%;
+        margin-bottom: 20px;
+    }
 }
 
-.form-input {
-    padding: 6px 20px;
-    margin: 15px 0;
+/* Responsividad para el formulario */
+@media (max-width: 768px) {
+    form {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .form-input, .form-input-button {
+        width: 100%;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    .btn {
+        width: 100%;
+        margin-left: 0;
+    }
 }
-
-.form-input-button {
-    display: flex;
-    justify-content: flex-start;
-    
-}
-
-input {
-    width: 600px;
-    box-sizing: border-box;
-    padding: 15px 8px;
-    border: 1.5px solid #1D390E;
-    min-height: 60px;
-}
-
-input::placeholder {
-    font-family: Montserrat;
-}
-
-textarea {
-    width: 600px;
-    box-sizing: border-box;
-    padding: 15px 8px;
-    border: 1.5px solid #1D390E;
-    min-height: 170px;
-}
-
-textarea::placeholder {
-    font-family: Montserrat;
-}
-
-.btn {
-    background-color: #09320f;
-    color: #fff;
-    padding: 8px 25px;
-    
-    border-radius: 10px;
-    border: 2px solid;
-    cursor: pointer;
-    box-sizing: content-box;
-    margin-left: 20px;
-}
-
-.btn:hover {
-    background-color: #1D390E;
-}
-
-
-
-
-
-
-
 
 
 /* footer */
