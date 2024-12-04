@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: "Josefin Sans" sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 /* Estilos principales de la navbar */
@@ -274,65 +274,66 @@ body {
     letter-spacing: 3px;
 }
 
+/*  
 .product-grid {
     display: grid;
     /* Activa el diseño en cuadrícula */
-    /* Crea columnas automáticas con un mínimo de 250px y que se ajusten al espacio */
+    /* Crea columnas automáticas con un mínimo de 250px y que se ajusten al espacio 
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 90px;
-    /* Espacio entre los elementos de la cuadrícula */
+    /* Espacio entre los elementos de la cuadrícula 
     padding: 0;
-    /* Espacio interno en los lados */
+    /* Espacio interno en los lados 
     max-width: 1400px;
     margin: 0 auto;
-}
+}  */
 
-.product-card-dest {
+/* .product-card-dest {
     background: #fff;
-    /* Fondo blanco */
+    /* Fondo blanco 
     border-radius: 8px;
-    /* Bordes redondeados */
+    /* Bordes redondeados 
     overflow: hidden;
     /* Oculta contenido que se salga de la tarjeta */
-    /* Sombra: desplazamiento-x desplazamiento-y desenfoque color */
+    /* Sombra: desplazamiento-x desplazamiento-y desenfoque color 
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s;
-    /* Animación suave al transformar */
+    /* Animación suave al transformar 
     max-width: 600px;
     cursor: pointer;
-}
+} */
 
-.product-card-dest:hover {
+/* .product-card-dest:hover {
     transform: translateY(-10px);
-    /* Mueve la tarjeta 5px hacia arriba al pasar el mouse */
-}
+    /* Mueve la tarjeta 5px hacia arriba al pasar el mouse 
+} */
 
-.product-image-dest {
+/* .product-image-dest {
     width: 100%;
-    /* Ocupa todo el ancho disponible */
+    /* Ocupa todo el ancho disponible 
     height: 400px;
-    /* Altura fija */
+    /* Altura fija 
     object-fit: cover;
-    /* Ajusta la imagen para cubrir el espacio sin deformarse */
+    /* Ajusta la imagen para cubrir el espacio sin deformarse 
     background: #000;
-    /* Fondo negro por si la imagen no carga */
-}
+    /* Fondo negro por si la imagen no carga 
+} */
 
-.product-info {
+/* .product-info {
     padding: 16px;
-    /* Espacio interno */
+    /* Espacio interno 
     text-align: center;
-    /* Centra el texto */
-}
+    /* Centra el texto 
+} */
 
-.product-title {
+/* .product-title {
     font-size: 18px;
-    /* Tamaño de la fuente */
+    /* Tamaño de la fuente 
     margin-bottom: 8px;
-    /* Espacio debajo del título */
+    /* Espacio debajo del título 
     color: #333;
-    /* Color del texto */
-}
+    /* Color del texto 
+} */
 
 
 /* Estilos para pantallas más pequeñas */
@@ -647,6 +648,7 @@ body {
     padding: 50px 0 20px;
     position: relative;
     overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .footer h5 {
@@ -789,4 +791,73 @@ body {
     .nav-link::after {
         display: none;
     }
+}
+
+
+
+
+
+
+
+
+
+.articles {
+    display: flex; 
+    flex-wrap: wrap; /* Permite que los artículos se envuelvan a la siguiente línea si no caben en la fila */
+    margin: 0 auto; /* Centra el contenedor de artículos horizontalmente */
+    justify-content: center; /* Centra los artículos en el contenedor */
+    max-width: 1400px; /* Establece un ancho máximo para el contenedor de artículos */
+    gap: 90px; /* Espacio entre cada artículo */
+}
+
+.articles article {
+    max-width: 256.5px; /* Establece un ancho máximo para cada artículo */
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el artículo */
+    display: block; /* Muestra cada artículo como un bloque separado */
+    transition: all 0.4s ease-in-out; /* Hace que los cambios en el artículo se animen suavemente */
+    overflow: hidden; /* Oculta cualquier contenido que sobrepase el área del artículo */
+    border-radius: 8px; /* Redondea las esquinas del artículo para que se vean más suaves */ 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+
+.articles article h2 {
+    text-align: center;
+    margin: 0 0 0px 0; /* Aplica un margen de 0 arriba, 0 a los lados y 18px abajo */
+    font-size: 18px; /* Establece un tamaño de fuente grande para el título */
+    color:#212529; /* Establece el color del texto usando el color secundario */
+    transition: color 0.3s ease-out; /* Hace que el cambio de color se anime suavemente */
+    
+}
+
+.articles article img {
+    max-width: 100%; /* Asegura que la imagen no sea más ancha que su contenedor */
+    transform-origin: center; /* Hace que las transformaciones de la imagen se realicen desde el centro */
+    transition: transform 0.4s ease-in-out; /* Hace que el cambio en el tamaño de la imagen se anime suavemente */
+} /* Estilo para las imágenes dentro de los artículos/cartas */
+
+.articles-preview {
+    padding: 16px 10px; /* Aplica un espacio interno de 24px */
+    background: #fff; /* Establece un fondo blanco para la vista previa */
+    border-radius: 8px;
+    transition: transform 0.3s;
+} 
+
+.articles figure {
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 400px; /* Establece una altura fija de 200px para la figura */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga del contenedor */
+    margin-bottom: 0;
+}/* Estilo para el contenedor de la imagen del artículo */
+
+.articles figure img {
+    height: 100%; height: 100%; /* Hace que la imagen ocupe toda la altura del contenedor */
+    aspect-ratio: 16/9; aspect-ratio: 16/9; /* Mantiene una relación de aspecto de 16:9 para la imagen */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que se salga */
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor manteniendo su relación de aspecto */
+}
+
+.articles article:hover {
+    transform: translateY(-10px); /* Aumenta el tamaño de la imagen al 150% */
 }

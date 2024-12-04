@@ -5,11 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="css/style.css">
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style.css">
     <title>SustenStyle</title>
 </head>
 
@@ -58,42 +58,77 @@
     </section>
 
     <!-- Productos destacados -->
+    
     <section class="featured-products">
         <h2 class="section-title">PRODUCTOS DESTACADOS</h2>
         <div class="container">
-            <div class="product-grid">
-                <!-- Producto 1 -->
+            <!-- <div class="product-grid">
+                
                 <div class="product-card-dest" onclick="location.href='index-mujer.html#espinela'">
                     <img src="img/foto1.jpg" alt="Espinela Sublime" class="product-image-dest">
                     <div class="product-info">
                         <h3 class="product-title">Espinela Sublime</h3>
                     </div>
                 </div>
-                <!-- Producto 2 -->
+                
                 <div class="product-card-dest" onclick="location.href='index-hombre.html#grisazul'">
                     <img src="img/foto2.jpg" alt="Gris y Azul" class="product-image-dest">
                     <div class="product-info">
                         <h3 class="product-title">Gris y Azul</h3>
                     </div>
                 </div>
-                <!-- Producto 3 -->
+                
                 <div class="product-card-dest" onclick="location.href='index-mujer.html#obsidiana'">
                     <img src="img/foto3.jpg" alt="Obsidiana Resplandeciente" class="product-image-dest">
                     <div class="product-info">
                         <h3 class="product-title">Obsidiana Resplandeciente</h3>
                     </div>
                 </div>
-                <!-- Producto 4 -->
+                
                 <div class="product-card-dest" onclick="location.href='index-mujer.html#agata'">
                     <img src="img/agata.jpg" alt="Agata Encantadora" class="product-image-dest">
                     <div class="product-info">
                         <h3 class="product-title">Agata Encantadora</h3>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
+                </div> 
+            </div>-->
 
+    <div class="articles"> <!--Contenedor donde se van a agrupar las cartas-->
+        <article onclick="location.href='index-mujer.html#espinela'"> <!--Articulo individual-->
+            <figure><!--Contiene la imagen la figura-->
+                <img src="img/foto1.jpg">
+            </figure>
+            <div class="articles-preview"> <!--Contenedor para el titulo, descripcion etc.-->
+                <h2>Espinela Sublime</h2> <!--Titulo del articulo-->
+            </div>
+        </article>
+        <article onclick="location.href='index-hombre.html#grisazul'"> <!--Articulo individual-->
+            <figure><!--Contiene la imagen la figura-->
+                <img src="img/foto2.jpg">
+            </figure>
+            <div class="articles-preview"> <!--Contenedor para el titulo, descripcion etc.-->
+                <h2>Gris y Azul</h2> <!--Titulo del articulo-->
+            </div>
+        </article>
+        <article onclick="location.href='index-mujer.html#obsidiana'"> <!--Articulo individual-->
+            <figure><!--Contiene la imagen la figura-->
+                <img src="img/foto3.jpg">
+            </figure>
+            <div class="articles-preview"> <!--Contenedor para el titulo, descripcion etc.-->
+                <h2>Obsidiana Resplandeciente <!--Titulo del articulo-->
+            </div>
+        </article>
+        <article onclick="location.href='index-mujer.html#agata'"> <!--Articulo individual-->
+            <figure><!--Contiene la imagen la figura-->
+                <img src="img/agata.jpg">
+            </figure>
+            <div class="articles-preview"> <!--Contenedor para el titulo, descripcion etc.-->
+                <h2>Agata Encantadora</h2> <!--Titulo del articulo-->
+            </div>
+        </article>
+    </div>
+</div>
+</section>
 <!-- marco -->
 
 <section class="marco">
