@@ -1,64 +1,221 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+
 main {
+    background-color: black;
+    color: white;
+    font-size: 16px;
     max-width: 100%;
-    overflow-x: hidden;
-    background-color: #111111;
-    font-family: 'Josefin Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    font-size: 15px;
+    padding: 10px;
+    margin: 0rem 0 0rem 0;
+    font-family: "Josefin Sans", sans-serif;
 }
 
-.title-main {
-    color: white;
-    max-width: 100%;
+.title-with-lines {
+    width: 100%;
     display: flex;
     align-items: center;
-    gap: 3rem;
-    padding: 0rem 0 0em 0;
-    margin: 3rem 0 0rem 0;
-}
-
-.title-main hr {
-    flex: 1;
-    height: 0.2rem;
-    /* 0.2px */
-    background-color: white;
-    color: white;
-    border-color: white;
-}
-
-.title-main h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-}
-
-.us {
-    display: grid;
-    grid-template-columns: 4fr 3fr; /* Dos columnas iguales */
-    grid-template-rows: 1fr;       /* Una sola fila */
-    max-height: 100vh;
-    overflow: auto;               /* Permite scroll si el contenido excede la altura */
-    color: white;
-    gap: 1rem;                    /* Espaciado entre columnas */
-    margin: 5rem 0 5rem 0;
-}
-
-.us-texto {
-    width: 100%;                 /* Ajusta al ancho completo de su celda */
-    margin-bottom: 30px;
-    padding: 5rem 0 0 7rem;   
-    font-size: 30px;            /* Añade algo de espacio interno */
-}
-
-.us-imagen {
-    width: 100%;                 /* Ajusta al ancho completo de su celda */
-    display: flex;               /* Centra el contenido */
     justify-content: center;
-    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0 1rem 0;
+    padding: 1rem 0 0rem 0;
 }
 
-.us-imagen img {
-    width: 100%;                  /* Tamaño de la imagen ajustado */
-    height: auto;                /* Mantiene las proporciones */
-    max-width: 300px;            /* Limita el tamaño máximo */
+.title-with-lines h1 {
+    font-size: 3rem;
+    /* Tamaño del título */
+    text-transform: uppercase;
+    font-weight: bold;
+    margin: 0;
+}
+
+.title-with-lines .line {
+    flex-grow: 1;
+    height: 2px;
+    background-color: rgb(255, 255, 255);
+}
+
+
+.IP {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0 4rem 0 4rem;
+    padding: 5rem 10rem 5rem 10rem;
+}
+
+.IP h1 {
+    padding: 0 3rem 1rem 10rem;
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.IP p {
+    padding: 1rem 0rem 0rem 0rem;
+    margin: 0 3rem 0 10rem;
+    font-size: 1.5rem;
+    border-top: 2px solid rgb(255, 255, 255);
+}
+
+.IP img {
+    max-width: 300px;
+}
+
+.MV {
+    width: 100%;
+    background-color: black!important;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0 8rem;
+    padding: 5rem 5rem 5rem 5rem;
+}
+
+.MV div {
+    padding: 5rem;
+
+}
+
+.MV h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    align-self: center;
+    justify-self: center;
+    padding: 1.5rem;
+}
+
+.MV p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+@media (max-width: 899px) {
+    main {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .IP {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 2rem;
+        padding: 1rem;
+    }
+
+    .IP h1 {
+        align-self: center;
+        justify-self: center;
+        font-size: 1.8rem; /* Ajuste para pantallas pequeñas */
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.2; /* Espaciado entre líneas */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 1rem 0; /* Espaciado interno opcional */
+        word-break: break-word; /* Permite que las palabras largas se ajusten */
+    }
+    
+
+    .IP p {
+        padding: 1rem 0;
+        margin: 0 1rem;
+        font-size: 1rem;
+        border-top: 2px solid white;
+    }
+
+    .MV {
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .MV div {
+        padding: 1rem;
+    }
+
+    .MV h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .MV p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+}
+
+@media (min-width: 900px) and (max-width: 1300px) {
+    main {
+        padding: 10px;
+        width: 100%;
+    }
+
+    .IP {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 2rem;
+        padding: 1rem;
+    }
+
+    .IP h1 {
+        align-self: center;
+        justify-self: center;
+        font-size: 1.8rem; /* Ajuste para pantallas pequeñas */
+        font-weight: 900;
+        text-align: center;
+        line-height: 1.2; /* Espaciado entre líneas */
+        margin: 0; /* Elimina márgenes adicionales */
+        padding: 1rem 1rem; /* Espaciado interno opcional */
+        word-break: break-word; /* Permite que las palabras largas se ajusten */
+    }
+    
+
+    .IP p {
+        padding: 1rem 0;
+        margin: 0 5rem;
+        font-size: 1rem;
+        border-top: 2px solid white;
+        text-align: justify;
+    }
+
+    .MV {
+        width: 100%;
+        background-color: black;
+        color: white;
+        display: grid;
+        grid-template-columns: 1fr 1fr ;
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .MV div {
+        padding: 1rem;
+    }
+
+    .MV h1 {
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    .MV p {
+        font-size: 1rem;
+        text-align: justify;
+    }
+
+    .IP img {
+        max-width: 300px;
+        margin: 0 0 0 3rem;
+
+    }
 }
