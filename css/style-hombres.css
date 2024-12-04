@@ -1,4 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+main {
     max-width: 100%;
     overflow-x: hidden;
     background-color: rgb(17, 17, 17);
@@ -12,9 +14,8 @@ body {
 .divisor-chick {
     display: flex;
     border-top: 0.3125rem solid #DAD3BE;
-    /* 5px */
     border-bottom: 0.3125rem solid #DAD3BE;
-    margin: rem 1rem 0 8rem 0;
+    margin: 1rem 0 8rem 0;
 }
 
 .divisor-chick div {
@@ -29,8 +30,13 @@ body {
     /* 20px */
     padding: 0.625rem 0 0.625rem 0;
     /* 10px */
-    font-size: 1.875rem;
+
+}
+
+.divisor-chick div>h1{
+    font-size: 2.5rem;
     /* 30px */
+    font-weight: 700;
 }
 
 .Color {
@@ -49,7 +55,6 @@ body {
     margin-left: 5px;
     /* Espaciado desde el texto */
 }
-
 
 /* Clases de las portadas */
 .portada {
@@ -72,10 +77,10 @@ body {
     align-self: center;
 }
 
-.portada-texto-titulo {
+.portada-texto-titulo h1 {
     max-width: 100%;
     text-transform: uppercase;
-    font-size: 3rem;
+    font-size: 5rem;
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     align-self: center;
@@ -96,12 +101,12 @@ body {
     padding: 0 0 0 0rem;
     transition: color 0.3s ease, transform 0.3s ease;
     font-size: 1.5rem;
+    padding: 1.5rem 0 0 0;
 }
 
 .portada-texto-descripcion ul>li {
     line-height: 2.5;
 }
-
 
 .portada-texto-descripcion:hover {
     color: #ffffff;
@@ -117,8 +122,7 @@ body {
 }
 
 .portada-foto img:hover {
-    border: 2px solid #fff;
-    transform: scale(.9);
+    transform: scale(1.3);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -144,10 +148,14 @@ body {
 
 .izquierda-titulo {
     text-transform: uppercase;
-    font-size: 2.5rem;
     justify-self: center;
     align-self: center;
     padding: 0 0 0 0;
+}
+
+.izquierda-titulo h1{
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 .izquierda-linea {
@@ -190,6 +198,10 @@ body {
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
+.izquierda-texto p {
+    font-size: 1.2rem;
+}
+
 .izquierda-texto ul>li {
     line-height: 2.5;
 }
@@ -200,8 +212,6 @@ body {
     transform: scale(1.2);
     /* Hace que las letras crezcan ligeramente */
 }
-
-
 
 /* Vestido Derecha */
 .derecha {
@@ -223,6 +233,11 @@ body {
     justify-self: center;
     align-self: center;
     padding: 0 0 0 0;
+}
+
+.derecha-titulo h1{
+    font-size: 4rem;
+    font-weight: 900;
 }
 
 .derecha-linea {
@@ -250,6 +265,7 @@ body {
 }
 
 .derecha-texto ul>li {
+
     line-height: 2.5;
 }
 
@@ -260,6 +276,10 @@ body {
     /* Hace que las letras crezcan ligeramente */
 }
 
+.derecha-texto p{
+    font-size: 1.2rem;
+
+}
 
 .derecha-img {
     display: flex;
@@ -281,32 +301,8 @@ body {
 
 
 /* Estilos para móviles */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     /* General Reset */
-
-    .portada {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: 100vh;
-    }
-
-    .portada-texto-titulo h1 {
-        justify-self: center;
-        font-size: 3rem;
-    }
-
-    .portada-texto-descripcion P {
-        padding: 1rem 0 0rem 0;
-        margin: 0 0 3rem 0;
-        font-size: 1rem;
-    }
-
-    .portada-foto {
-        justify-content: center;
-        width: 100%;
-    }
 
     * {
         margin: 0;
@@ -326,12 +322,12 @@ body {
         color: black;
     }
 
-    .divisor-chick div {
+    .divisor-chick h1 {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
-        height: 3rem;
+        height: 4rem;
         /* 100px */
         background-color: #DAD3BE;
         margin: 1rem 0 1rem 0;
@@ -339,23 +335,48 @@ body {
         padding: .5rem 0 0.5rem 0;
         /* 10px */
         font-size: 3rem;
-        /* 30px */
+        font-weight: 900;
     }
 
-    .divisor-chick div>h1 {
-        font-size: 2.5rem;
-        /* 30px */
+    .portada {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
     }
+
+    .portada-texto-titulo h1 {
+        justify-self: center;
+        font-size: 4rem;
+        margin: 0 0 2rem 0;
+    }
+
+    .portada-texto-descripcion p {
+        font-size: 1.2rem;
+        line-height: 1.6;
+        text-align: justify;
+        padding: 1.5rem;
+    }
+
+    .portada-foto {
+        justify-content: center;
+    }
+
+    .portada-foto img {
+        max-width: 100%;
+        height: 80vh;
+    }
+
 
     /* Estructura general */
     .izquierda,
     .derecha {
         display: flex;
         flex-direction: column;
-        /* Orden en columna */
         align-items: center;
-        /* Centra horizontalmente los elementos */
-        max-height: 100dvh;
+        max-height: auto;
+        padding: 1rem;
     }
 
     .izquierda-linea,
@@ -366,10 +387,7 @@ body {
     .derecha-img,
     .izquierda-texto,
     .derecha-texto {
-        width: 100%;
-        /* Ocupa toda la línea */
         text-align: center;
-        /* Centra el contenido textual */
     }
 
     /* Asegura el orden correcto */
@@ -400,7 +418,7 @@ body {
     /* Imágenes responsivas */
     .izquierda-img img,
     .derecha-img img {
-        width: 45%;
+        width: 50%;
         /* Imágenes ocupan todo el ancho */
         height: auto;
         /* Mantiene proporciones */
@@ -411,32 +429,30 @@ body {
     .derecha-linea hr {
         margin: 10px auto;
         width: 90%;
-        height: 0.2rem;
+        height: 2px;
         background-color: #fff;
         border: none;
-        /* Elimina bordes adicionales */
     }
-
     /* Títulos */
     .izquierda-titulo h1,
     .derecha-titulo h1 {
-        font-size: 2.5rem;
-        /* Ajusta tamaño del texto */
-        margin: 10px 0;
-        text-transform: uppercase;
+        font-size: 3rem;
+        margin: 0.5rem 0;
+        text-align: center;
+        font-weight: 800;
     }
 
     .izquierda-texto p,
     .derecha-texto p {
-        font-size: 1rem;
+        font-size: 1.1rem;
+        line-height: 1.4;
         text-align: justify;
-        /* Para mejor legibilidad */
-        line-height: 1.5;
+        margin: 0.5rem 0;
     }
 
     .izquierda-texto ul,
     .derecha-texto ul {
-        font-size: .6rem;
+        font-size: 1rem;
         text-align: justify;
         /* Para mejor legibilidad */
         line-height: 1.2;
@@ -445,16 +461,12 @@ body {
     .izquierda-texto,
     .derecha-texto {
         margin: 2rem 0 0 0;
-        display: grid;
-        /* Eliminamos el valor incorrecto */
-        grid-template-columns: 50% 40%;
-        grid-template-rows: 1fr;
-        gap: 2rem 3rem;
+        display: block; ;
         justify-self: start;
     }
 }
 
-@media (min-width: 481px) and (max-width: 768px) {
+@media (min-width: 601px) and (max-width: 768px) {
 
     /* General Reset */
     * {

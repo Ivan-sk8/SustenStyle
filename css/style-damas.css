@@ -1,4 +1,6 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600;700&display=swap');
+
+main {
     max-width: 100%;
     overflow-x: hidden;
     background-color: rgb(13, 13, 13);
@@ -69,6 +71,11 @@ body {
     /* 30px */
 }
 
+.divisor-chick div>h1 {
+    font-size: 3rem;
+    font-weight: 900;
+}
+
 .Color {
     display: inline-block;
     /* Para alinearlo con el texto */
@@ -123,12 +130,28 @@ body {
     /* Hace que las letras crezcan ligeramente */
 }
 
+.portada-texto-titulo h1 {
+    align-self: center;
+    justify-self: center;
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 5rem 0 0 0;
+    padding: 0 0 2rem 0;
+}
+
+
 .portada-texto-descripcion {
     border-top: .2rem solid white;
     text-align: justify;
     line-height: 1.5;
     padding: 0 0 0 0rem;
     transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.portada-texto-descripcion p {
+    line-height: 1.5;
+    padding: 2rem 0 0 0;
+    font-size: 1.2rem;
 }
 
 .portada-texto-descripcion ul>li {
@@ -183,8 +206,46 @@ body {
     padding: 0 0 0 0;
 }
 
+.izquierda-titulo h1{
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    transition: transform 0.5s ease, border 0.5s ease;
+}
+
+.izquierda-titulo:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.1);
+    /* Hace que las letras crezcan ligeramente */
+}
+
 .izquierda-linea {
     display: flex;
+}
+
+.izquierda-texto {
+    align-self: center;
+    color: white;
+    line-height: 1.8;
+    text-align: justify;
+    max-width: 70%;
+    transition: color 0.3s ease, transform 0.3s ease;
+    line-height: 1.8;
+    padding: 2rem 0 0 0;
+    font-size: 1.2rem;
+}
+
+.izquierda-texto ul>li {
+    line-height: 2.5;
+}
+
+.izquierda-texto:hover {
+    color: #ffffff;
+    /* Cambia el color al pasar el mouse */
+    transform: scale(1.2);
+    /* Hace que las letras crezcan ligeramente */
 }
 
 .izquierda-linea hr {
@@ -214,28 +275,6 @@ body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.izquierda-texto {
-    align-self: center;
-    color: white;
-    line-height: 1.8;
-    text-align: justify;
-    max-width: 70%;
-    transition: color 0.3s ease, transform 0.3s ease;
-}
-
-.izquierda-texto ul>li {
-    line-height: 2.5;
-}
-
-.izquierda-texto:hover {
-    color: #ffffff;
-    /* Cambia el color al pasar el mouse */
-    transform: scale(1.2);
-    /* Hace que las letras crezcan ligeramente */
-}
-
-
-
 /* Vestido Derecha */
 .derecha {
     color: rgb(209, 209, 209);
@@ -256,6 +295,19 @@ body {
     justify-self: center;
     align-self: center;
     padding: 0 0 0 0;
+}
+
+.derecha-titulo h1{
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    transition: transform 0.5s ease, border 0.5s ease;
+}
+
+.derecha-titulo:hover {
+    transform: scale(1.1);
+    /* Hace que las letras crezcan ligeramente */
 }
 
 .derecha-linea {
@@ -280,6 +332,8 @@ body {
     max-width: 70%;
     transition: color 0.3s ease, transform 0.3s ease;
     /* Transiciones suaves */
+    padding: 2rem 0 0 0;
+    font-size: 1.2rem;
 }
 
 .derecha-texto ul>li {
